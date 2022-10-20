@@ -13,7 +13,7 @@
     
     
       
-        <title>Concepts - Element DeepLabCut</title>
+        <title>Concepts - DataJoint Documentation</title>
       
     
     
@@ -44,6 +44,16 @@
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -88,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Element DeepLabCut" class="md-header__button md-logo" aria-label="Element DeepLabCut" data-md-component="logo">
+    <a href=".." title="DataJoint Documentation" class="md-header__button md-logo" aria-label="DataJoint Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208.15 210.1">
@@ -122,7 +132,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Element DeepLabCut
+            DataJoint Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -231,8 +241,8 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
     <label class="md-nav__title" for="__drawer">
-        <a href=".." title="Element DeepLabCut"
-            class="md-nav__button md-logo" aria-label="Element DeepLabCut" data-md-component="logo">
+        <a href=".." title="DataJoint Documentation"
+            class="md-nav__button md-logo" aria-label="DataJoint Documentation" data-md-component="logo">
             
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208.15 210.1">
@@ -345,6 +355,47 @@
     Element Architecture
   </a>
   
+    <nav class="md-nav" aria-label="Element Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lab-schema" class="md-nav__link">
+    lab schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subject-schema" class="md-nav__link">
+    subject schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-schema" class="md-nav__link">
+    session schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#train-schema" class="md-nav__link">
+    train schema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-schema" class="md-nav__link">
+    model schema
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -355,8 +406,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pipeline-development" class="md-nav__link">
-    Pipeline Development
+  <a href="#element-development" class="md-nav__link">
+    Element Development
   </a>
   
 </li>
@@ -405,43 +456,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4">
-          About
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="About" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          About
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../about/changelog/" class="md-nav__link">
-        Changelog
+      <a href="../citation/" class="md-nav__link">
+        Citation
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -822,6 +840,21 @@
   
 
         
+        
+        
+        
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+        
     </ul>
 </nav>
                   </div>
@@ -844,14 +877,27 @@
 
 <h1 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h1>
 <h2 id="pose-estimation-in-neurophysiology">Pose Estimation in Neurophysiology<a class="headerlink" href="#pose-estimation-in-neurophysiology" title="Permanent link">&para;</a></h2>
-<!-- Info from previous BACKGROUND doc -->
-
+<p>Neurophysiology is concerned not only with the inner workings of the brain, but the
+relationship between neural firings and environmental stimuli, natural behavior, or
+inferred cognitive states. One approach is to present a stationary subject with planned
+stimuli. More naturalistic paradigms permit spontaneous behavior, and add some mechanism
+measure subject responses. Through pose estimation, we capture the richness of a
+subject's natural behavior, which can then be paired with neuronal recordings.</p>
 <p>Previous pose estimation methods required reflective markers placed on a subject, as
 well as multiple expensive high-frame-rate infrared cameras to triangulate position
 within a limited field. Recent advancements in machine learning have facilitated
 dramatic advancements in capturing pose data with a video camera alone. In particular,
-<a href="http://deeplabcut.org/">DeepLabCut</a> (DLC) facilitates the use of pre-trained machine learning models for 2-D and
+<a href="http://deeplabcut.org/">DeepLabCut</a> (DLC) facilitates the use of pre-trained machine 
+learning models for 2-D and
 3-D non-invasive markerless pose estimation. </p>
+<p>By training a model, DLC takes a machine learning process in its current state
+and refining it to specialize in the video data collected in our experiment. This 
+process works best when the camera has a consistent field of view across sessions, and
+when generating pose estimation inferences on consistent data sets (e.g., subjects with 
+similar characteristics). DLC saves models at various checkpoints and recommends
+training for approximately 200,000 iterations. When DLC generates pose estimation 
+inferences, this model is applied to novel videos, generating predictions of where the
+same set of training points would be in this new situation.</p>
 <p>While some alternative tools are either species-specific (e.g.,
 <a href="https://github.com/NeLy-EPFL/DeepFly3D">DeepFly3D</a>) or uniquely 2D (e.g.,
 <a href="https://github.com/jgraving/DeepPoseKit">DeepPoseKit</a>), DLC highlights a diversity of
@@ -871,32 +917,124 @@ creator- and peer-support. Other comperable tools include
 <a href="https://github.com/LINCellularNeuroscience/VAME">VAME</a>, and
 <a href="https://github.com/neuroethology/MARS">MARS</a>.</p>
 <h2 id="element-architecture">Element Architecture<a class="headerlink" href="#element-architecture" title="Permanent link">&para;</a></h2>
-<p>Each node in the following diagram represents the analysis code in the Element DeepLabCut and corresponding table in the database.</p>
+<p>Each node in the following diagram represents the analysis code in the workflow for Element DeepLabCut and corresponding table in the database.  Within the workflow, Element DeepLabCut connects to upstream Elements including Lab, Animal, and Session.</p>
 <p><img alt="element-deeplabcut diagram" src="https://raw.githubusercontent.com/datajoint/element-deeplabcut/main/images/diagram_dlc.svg" /></p>
+<h3 id="lab-schema"><code>lab</code> schema<a class="headerlink" href="#lab-schema" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Device</td>
+<td>Camera metadata</td>
+</tr>
+</tbody>
+</table>
+<h3 id="subject-schema"><code>subject</code> schema<a class="headerlink" href="#subject-schema" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Upstream: <p>- Element DeepLabCut connects to a a <strong><em>Session</em></strong> table, which is modeled in our 
-  <a href="https://github.com/datajoint/workflow-deeplabcut/blob/main/workflow_deeplabcut/pipeline.py">workflow pipeline</a>. </p>
-<p>- Although not requried, most choose to connect <strong><em>Session</em></strong> to a <strong>*Subject</strong> 
-  table for managing research subjects.</p>
-</li>
+<li>Although not required, most choose to connect the <code>Session</code> table to a <code>Subject</code> table.</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subject</td>
+<td>Basic information of the research subject</td>
+</tr>
+</tbody>
+</table>
+<h3 id="session-schema"><code>session</code> schema<a class="headerlink" href="#session-schema" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Session</td>
+<td>Unique experimental session identifier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="train-schema"><code>train</code> schema<a class="headerlink" href="#train-schema" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>train</code> schema: Tables related to model training. Optional.<p>+ <strong><em>VideoSet</em></strong>: The set of files corresponding to a training dataset.</p>
-<p>+ <strong><em>TrainingParamSet</em></strong>: A collection of model training parameters, represented by an index.</p>
-<p>+ <strong><em>TrainingTask</em></strong>: A set of tasks specifying model training methods.</p>
-<p>+ <strong><em>ModelTraining</em></strong>: A record of training iterations launched by <strong><em>TrainingTask</em></strong>.</p>
-</li>
+<li>Tables related to model training. Optional.</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VideoSet</td>
+<td>Set of files corresponding to a training dataset.</td>
+</tr>
+<tr>
+<td>TrainingParamSet</td>
+<td>A collection of model training parameters, represented by an index.</td>
+</tr>
+<tr>
+<td>TrainingTask</td>
+<td>A set of tasks specifying model training methods.</td>
+</tr>
+<tr>
+<td>ModelTraining</td>
+<td>A record of training iterations launched by <code>TrainingTask</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="model-schema"><code>model</code> schema<a class="headerlink" href="#model-schema" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>model</code> schema: Tables related to DeepLabCut models and pose estimation. The <code>model</code> can be used without the <code>train</code> schema.<p>+ <strong><em>VideoRecording</em></strong>: Video(s) from one recording session, for pose estimation.</p>
-<p>+ <strong><em>BodyPart</em></strong>: Unique body parts (a.k.a. joints) and descriptions thereof.</p>
-<p>+ <strong><em>Model</em></strong>: A central table for storing unique models.</p>
-<p>+ <strong><em>ModelEvaluation</em></strong>: Evaluation results for each model.</p>
-<p>+ <strong><em>PoseEstimationTask</em></strong>: A series of pose estimation tasks to be completed. 
-      Pairings of video recordings with models to be use for pose estimation.</p>
-<p>+ <strong><em>PoseEstimation</em></strong>: Results of pose estimation using a given model. </p>
-</li>
+<li>Tables related to DeepLabCut models and pose estimation. The <code>model</code> can be used without the <code>train</code> schema.</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VideoRecording</td>
+<td>Video(s) from one recording session, for pose estimation.</td>
+</tr>
+<tr>
+<td>BodyPart</td>
+<td>Unique body parts (a.k.a. joints) and descriptions thereof.</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>A central table for storing unique models.</td>
+</tr>
+<tr>
+<td>ModelEvaluation</td>
+<td>Evaluation results for each model.</td>
+</tr>
+<tr>
+<td>PoseEstimationTask</td>
+<td>A series of pose estimation tasks to be completed. Pairings of video recordings with models to be use for pose estimation.</td>
+</tr>
+<tr>
+<td>PoseEstimation</td>
+<td>Results of pose estimation using a given model.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="key-partnerships">Key Partnerships<a class="headerlink" href="#key-partnerships" title="Permanent link">&para;</a></h2>
 <p><a href="http://www.mackenziemathislab.org/">Mackenzie Mathis</a> (Swiss Federal Institute of Technology Lausanne) is both a lead
 developer of DLC and a key advisor on DataJoint open source development as a member of
@@ -923,7 +1061,7 @@ interfaces.</p>
 <ul>
 <li>James Cotton Lab (Northwestern University)</li>
 </ul>
-<h2 id="pipeline-development">Pipeline Development<a class="headerlink" href="#pipeline-development" title="Permanent link">&para;</a></h2>
+<h2 id="element-development">Element Development<a class="headerlink" href="#element-development" title="Permanent link">&para;</a></h2>
 <p>Development of the Element began with an <a href="https://github.com/MMathisLab/DataJoint_Demo_DeepLabCut">open source
 repository</a> shared by the
 Mathis team. We further identified common needs across our respective partnerships to
@@ -960,7 +1098,53 @@ might adopt this exension in it's current form or make modifications. </p>
 </ul>
 
 
+  
 
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+                Thanks for your feedback!
+              
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+                Thanks for your feedback!
+              
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
 
 
                 
