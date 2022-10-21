@@ -715,6 +715,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#workflow_deeplabcut.pipeline.Device" class="md-nav__link">
+    Device
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#workflow_deeplabcut.pipeline.get_dlc_processed_data_dir" class="md-nav__link">
     get_dlc_processed_data_dir()
   </a>
@@ -826,6 +833,93 @@
 
 
 
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="workflow_deeplabcut.pipeline.Device" class="doc doc-heading">
+        <code>Device</code>
+
+
+<a href="#workflow_deeplabcut.pipeline.Device" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="datajoint">dj</span>.<span title="datajoint.Lookup">Lookup</span></code></p>
+
+  
+      <p>Table for managing lab equiment.</p>
+<p>In Element DeepLabCut, this table is referenced by <code>model.VideoRecording</code>.
+The primary key is also used to generate inferred output directories when
+running pose estimation inference. Refer to the <code>definition</code> attribute
+for the table design.</p>
+
+
+        <details class="quote">
+          <summary>Source code in <code>workflow_deeplabcut/pipeline.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@lab</span><span class="o">.</span><span class="n">schema</span>
+<span class="k">class</span> <span class="nc">Device</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Lookup</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Table for managing lab equiment.</span>
+
+<span class="sd">    In Element DeepLabCut, this table is referenced by `model.VideoRecording`.</span>
+<span class="sd">    The primary key is also used to generate inferred output directories when</span>
+<span class="sd">    running pose estimation inference. Refer to the `definition` attribute</span>
+<span class="sd">    for the table design.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">definition</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    device             : varchar(32)</span>
+<span class="s2">    ---</span>
+<span class="s2">    modality           : varchar(64)</span>
+<span class="s2">    description=null   : varchar(256)</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">contents</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s2">&quot;Camera1&quot;</span><span class="p">,</span> <span class="s2">&quot;Pose Estimation&quot;</span><span class="p">,</span> <span class="s2">&quot;Panasonic HC-V380K&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;Camera2&quot;</span><span class="p">,</span> <span class="s2">&quot;Pose Estimation&quot;</span><span class="p">,</span> <span class="s2">&quot;Panasonic HC-V770K&quot;</span><span class="p">],</span>
+    <span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
 
 
 <div class="doc doc-object doc-function">

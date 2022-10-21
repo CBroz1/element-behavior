@@ -351,6 +351,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#key-partnerships" class="md-nav__link">
+    Key Partnerships
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#element-architecture" class="md-nav__link">
     Element Architecture
   </a>
@@ -359,36 +366,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lab-schema" class="md-nav__link">
-    lab schema
+  <a href="#lab-schema-api-docs" class="md-nav__link">
+    lab schema (API docs)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#subject-schema" class="md-nav__link">
-    subject schema
+  <a href="#subject-schema-api-docs" class="md-nav__link">
+    subject schema (API docs)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#session-schema" class="md-nav__link">
-    session schema
+  <a href="#session-schema-api-docs" class="md-nav__link">
+    session schema (API docs)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#train-schema" class="md-nav__link">
-    train schema
+  <a href="#train-schema-api-docs" class="md-nav__link">
+    train schema (API docs)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#model-schema" class="md-nav__link">
-    model schema
+  <a href="#model-schema-api" class="md-nav__link">
+    model schema (API)
   </a>
   
 </li>
@@ -399,15 +406,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-partnerships" class="md-nav__link">
-    Key Partnerships
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#element-development" class="md-nav__link">
-    Element Development
+  <a href="#element-features" class="md-nav__link">
+    Element Features
   </a>
   
 </li>
@@ -877,12 +877,7 @@
 
 <h1 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h1>
 <h2 id="pose-estimation-in-neurophysiology">Pose Estimation in Neurophysiology<a class="headerlink" href="#pose-estimation-in-neurophysiology" title="Permanent link">&para;</a></h2>
-<p>Neurophysiology is concerned not only with the inner workings of the brain, but the
-relationship between neural firings and environmental stimuli, natural behavior, or
-inferred cognitive states. One approach is to present a stationary subject with planned
-stimuli. More naturalistic paradigms permit spontaneous behavior, and add some mechanism
-measure subject responses. Through pose estimation, we capture the richness of a
-subject's natural behavior, which can then be paired with neuronal recordings.</p>
+<p>Studying the inner workings of the brain requires understanding the relationship between neural activity and environmental stimuli, natural behavior, or inferred cognitive states. Pose estimation is a computer vision method to track the position, and thereby behavior, of the subject over the course of an experiment, which can then be paired with neuronal recordings to answer scientific questions about the brain.</p>
 <p>Previous pose estimation methods required reflective markers placed on a subject, as
 well as multiple expensive high-frame-rate infrared cameras to triangulate position
 within a limited field. Recent advancements in machine learning have facilitated
@@ -909,17 +904,43 @@ GitHub forks or more citations (1600 vs. 900). DLC's trajectory toward an indust
 standard is attributable to <a href="http://www.mackenziemathislab.org/deeplabcutblog/2020/11/18/czidlc">continued
 funding</a>, <a href="https://deeplabcut.github.io/DeepLabCut/docs/intro.html">extensive
 documentation</a> and both
-creator- and peer-support. Other comperable tools include
+creator- and peer-support. Other comparable tools include
 <a href="https://github.com/open-mmlab/mmpose">mmpose</a>,
 <a href="[idtracker.ai](https://idtrackerai.readthedocs.io/en/latest/)">idtracker.ai</a>,
 <a href="https://github.com/neuroethology/TREBA">TREBA</a>,
 <a href="https://github.com/neuroethology/BKinD">B-KinD</a>,
 <a href="https://github.com/LINCellularNeuroscience/VAME">VAME</a>, and
 <a href="https://github.com/neuroethology/MARS">MARS</a>.</p>
+<h2 id="key-partnerships">Key Partnerships<a class="headerlink" href="#key-partnerships" title="Permanent link">&para;</a></h2>
+<p><a href="http://www.mackenziemathislab.org/">Mackenzie Mathis</a> (Swiss Federal Institute of Technology Lausanne) is both a lead
+developer of DLC and a key advisor on DataJoint open source development as a member of
+the <a href="datajoint.com/docs/elements/management/governance">Scientific Steering Committee</a>.</p>
+<p>DataJoint is also partnered with a number of groups who use DLC as part of broader
+workflows. In these collaborations, members of the DataJoint team have interviewed
+the scientists to understand their needs in experimental setup, pipeline design, and
+interfaces.</p>
+<p>These teams include:</p>
+<ul>
+<li>Moser Group (Norwegian University of Science and Technology) - see <a href="https://moser-pipelines.readthedocs.io/en/latest/imaging/dlc.html">pipeline
+  design</a></li>
+</ul>
+<ul>
+<li>Mesoscale Activity Project (Janelia Research Campus/Baylor College of Medicine/New
+  York University)</li>
+</ul>
+<ul>
+<li>Hui-Chen Lu Lab (Indiana University)</li>
+</ul>
+<ul>
+<li>Tobias Rose Lab (University of Bonn)</li>
+</ul>
+<ul>
+<li>James Cotton Lab (Northwestern University)</li>
+</ul>
 <h2 id="element-architecture">Element Architecture<a class="headerlink" href="#element-architecture" title="Permanent link">&para;</a></h2>
-<p>Each node in the following diagram represents the analysis code in the workflow for Element DeepLabCut and corresponding table in the database.  Within the workflow, Element DeepLabCut connects to upstream Elements including Lab, Animal, and Session.</p>
+<p>Each node in the following diagram represents the analysis code in the workflow and the corresponding tables in the database.  Within the workflow, Element DeepLabCut connects to upstream Elements including Lab, Animal, and Session.  For more detailed documentation on each table, see the API docs for the respective schemas.</p>
 <p><img alt="element-deeplabcut diagram" src="https://raw.githubusercontent.com/datajoint/element-deeplabcut/main/images/diagram_dlc.svg" /></p>
-<h3 id="lab-schema"><code>lab</code> schema<a class="headerlink" href="#lab-schema" title="Permanent link">&para;</a></h3>
+<h3 id="lab-schema-api-docs"><code>lab</code> schema (<a href="https://datajoint.com/docs/workflow-deeplabcut/api/workflow_deeplabcut/pipeline/#workflow_deeplabcut.pipeline.Device">API docs</a>)<a class="headerlink" href="#lab-schema-api-docs" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -934,7 +955,7 @@ creator- and peer-support. Other comperable tools include
 </tr>
 </tbody>
 </table>
-<h3 id="subject-schema"><code>subject</code> schema<a class="headerlink" href="#subject-schema" title="Permanent link">&para;</a></h3>
+<h3 id="subject-schema-api-docs"><code>subject</code> schema (<a href="https://datajoint.com/docs/element-animal/api/element_animal/subject">API docs</a>)<a class="headerlink" href="#subject-schema-api-docs" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Although not required, most choose to connect the <code>Session</code> table to a <code>Subject</code> table.</li>
 </ul>
@@ -952,7 +973,7 @@ creator- and peer-support. Other comperable tools include
 </tr>
 </tbody>
 </table>
-<h3 id="session-schema"><code>session</code> schema<a class="headerlink" href="#session-schema" title="Permanent link">&para;</a></h3>
+<h3 id="session-schema-api-docs"><code>session</code> schema (<a href="https://datajoint.com/docs/element-session/api/element_session/session_with_datetime">API docs</a>)<a class="headerlink" href="#session-schema-api-docs" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -967,9 +988,9 @@ creator- and peer-support. Other comperable tools include
 </tr>
 </tbody>
 </table>
-<h3 id="train-schema"><code>train</code> schema<a class="headerlink" href="#train-schema" title="Permanent link">&para;</a></h3>
+<h3 id="train-schema-api-docs"><code>train</code> schema (<a href="/api/element_deeplabcut/train">API docs</a>)<a class="headerlink" href="#train-schema-api-docs" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Tables related to model training. Optional.</li>
+<li>Optional tables related to model training.</li>
 </ul>
 <table>
 <thead>
@@ -997,9 +1018,9 @@ creator- and peer-support. Other comperable tools include
 </tr>
 </tbody>
 </table>
-<h3 id="model-schema"><code>model</code> schema<a class="headerlink" href="#model-schema" title="Permanent link">&para;</a></h3>
+<h3 id="model-schema-api"><code>model</code> schema (<a href="/api/element_deeplabcut/model">API</a>)<a class="headerlink" href="#model-schema-api" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Tables related to DeepLabCut models and pose estimation. The <code>model</code> can be used without the <code>train</code> schema.</li>
+<li>Tables related to DeepLabCut models and pose estimation. The <code>model</code> schema can be used without the <code>train</code> schema.</li>
 </ul>
 <table>
 <thead>
@@ -1035,61 +1056,23 @@ creator- and peer-support. Other comperable tools include
 </tr>
 </tbody>
 </table>
-<h2 id="key-partnerships">Key Partnerships<a class="headerlink" href="#key-partnerships" title="Permanent link">&para;</a></h2>
-<p><a href="http://www.mackenziemathislab.org/">Mackenzie Mathis</a> (Swiss Federal Institute of Technology Lausanne) is both a lead
-developer of DLC and a key advisor on DataJoint open source development as a member of
-the <a href="datajoint.com/docs/elements/management/governance">Scientific Steering Committee</a>.</p>
-<p>DataJoint is also partnered with a number of groups who use DLC as part of broader
-workflows. In these collaborations, members of the DataJoint team have interviewed
-researchers to understand their needs in experiment workflow, pipeline design, and
-interfaces.</p>
-<p>These teams include:</p>
-<ul>
-<li>Moser Group (Norwegian University of Science and Technology) - see <a href="https://moser-pipelines.readthedocs.io/en/latest/imaging/dlc.html">pipeline
-  design</a></li>
-</ul>
-<ul>
-<li>Mesoscale Activity Project (Janelia Research Campus/Baylor College of Medicine/New
-  York University)</li>
-</ul>
-<ul>
-<li>Hui-Chen Lu Lab (Indiana University)</li>
-</ul>
-<ul>
-<li>Tobias Rose Lab (University of Bonn)</li>
-</ul>
-<ul>
-<li>James Cotton Lab (Northwestern University)</li>
-</ul>
-<h2 id="element-development">Element Development<a class="headerlink" href="#element-development" title="Permanent link">&para;</a></h2>
+<h2 id="element-features">Element Features<a class="headerlink" href="#element-features" title="Permanent link">&para;</a></h2>
 <p>Development of the Element began with an <a href="https://github.com/MMathisLab/DataJoint_Demo_DeepLabCut">open source
 repository</a> shared by the
 Mathis team. We further identified common needs across our respective partnerships to
 offer the following features for single-camera 2D models:</p>
 <ul>
-<li>Training data and parameter management</li>
-<li>Launching model training and automatic model evaluation</li>
-<li>Model metadata management</li>
-<li>Launching inference video analysis and capturing pose estimation output</li>
+<li>Manage training data and configuration parameters</li>
+<li>Launch model training</li>
+<li>Evaluate models automatically and directly compare models</li>
+<li>Manage model metadata</li>
+<li>Launch inference video analysis </li>
+<li>Capture pose estimation output for each session</li>
 </ul>
-<p>The workflow handles training data as file sets stored within DLC's project directory.
-Parameters of the configuration file are captured and preserved. Model evaluation
-permits direct model comparison, and, when combined with upstream Elements, Element
-DeepLabCut can be used to generate pose estimation information for each session.</p>
 <h2 id="data-export-and-publishing">Data Export and Publishing<a class="headerlink" href="#data-export-and-publishing" title="Permanent link">&para;</a></h2>
-<p>DeepLabCut's official <a href="https://github.com/DeepLabCut/DLC2NWB/">export package</a> is best
-method for turning DeepLabCut pose estimation data into standard Neurodata Without
-Borders (NWB) files. This makes it easy to share files with collaborators and publish
-results on <a href="https://dandiarchive.org/">DANDI Archive</a>. <a href="https://www.nwb.org/">NWB</a>, as
-an organization, is dedicated to standardizing data formats and maximizing
-interoperability across tools for neurophysiology. For more information on uploading
-NWB files to DANDI within the DataJoint Elements ecosystem, visit our documentation
-for the DANDI upload feature of 
-<a href="datajoint.com/docs/elements/element-interface/">Element Interface</a>.</p>
-<p>Pose data, however, is not yet specified in NWB Core and is instead an 
-<a href="https://training.incf.org/lesson/how-build-and-share-extensions-nwb">extension of NWB</a>,
-via <a href="https://github.com/rly/ndx-pose"><code>ndx-pose</code></a>. Future versions of the NWB standard
-might adopt this exension in it's current form or make modifications. </p>
+<p>Element DeepLabCut includes an export function that saves the outputs as a Neurodata Without Borders (NWB) file.  By running a single command, the data from an experimental session is saved to a NWB file.</p>
+<p>For more details on the export function, see the <a href="/tutorials">Tutorials page</a>.</p>
+<p>Once NWB files are generated they can be readily shared with collaborators and published on <a href="https://dandiarchive.org/">DANDI Archive</a>.  The DataJoint Elements ecosystem includes a function to upload the NWB files to DANDI (see <a href="datajoint.com/docs/elements/element-interface/">Element Interface</a>).</p>
 <h2 id="roadmap">Roadmap<a class="headerlink" href="#roadmap" title="Permanent link">&para;</a></h2>
 <p>Further development of this Element is community driven.  Upon user requests and based on guidance from the Scientific Steering Group we will add the following features to this Element:</p>
 <ul>

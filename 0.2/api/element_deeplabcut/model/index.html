@@ -1049,9 +1049,7 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 
         <details class="quote">
           <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">197</span>
-<span class="normal">198</span>
-<span class="normal">199</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">199</span>
 <span class="normal">200</span>
 <span class="normal">201</span>
 <span class="normal">202</span>
@@ -1125,7 +1123,9 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 <span class="normal">270</span>
 <span class="normal">271</span>
 <span class="normal">272</span>
-<span class="normal">273</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
 <span class="k">class</span> <span class="nc">BodyPart</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Lookup</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Body parts tracked by DeepLabCut models</span>
 
@@ -1271,9 +1271,7 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 
       <details class="quote">
         <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">209</span>
-<span class="normal">210</span>
-<span class="normal">211</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">211</span>
 <span class="normal">212</span>
 <span class="normal">213</span>
 <span class="normal">214</span>
@@ -1295,7 +1293,9 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 <span class="normal">230</span>
 <span class="normal">231</span>
 <span class="normal">232</span>
-<span class="normal">233</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
 <span class="k">def</span> <span class="nf">extract_new_body_parts</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">dlc_config</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">verbose</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Returns list of body parts present in dlc config, but not BodyPart table.</span>
 
@@ -1390,9 +1390,7 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 
       <details class="quote">
         <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">235</span>
-<span class="normal">236</span>
-<span class="normal">237</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">237</span>
 <span class="normal">238</span>
 <span class="normal">239</span>
 <span class="normal">240</span>
@@ -1428,7 +1426,9 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 <span class="normal">270</span>
 <span class="normal">271</span>
 <span class="normal">272</span>
-<span class="normal">273</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
 <span class="k">def</span> <span class="nf">insert_from_config</span><span class="p">(</span>
     <span class="bp">cls</span><span class="p">,</span> <span class="n">dlc_config</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">descriptions</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">prompt</span><span class="o">=</span><span class="kc">True</span>
 <span class="p">):</span>
@@ -1508,9 +1508,7 @@ snapshotindex, and trainingsetindex.</p>
 
         <details class="quote">
           <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">276</span>
-<span class="normal">277</span>
-<span class="normal">278</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">278</span>
 <span class="normal">279</span>
 <span class="normal">280</span>
 <span class="normal">281</span>
@@ -1658,7 +1656,9 @@ snapshotindex, and trainingsetindex.</p>
 <span class="normal">423</span>
 <span class="normal">424</span>
 <span class="normal">425</span>
-<span class="normal">426</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
 <span class="k">class</span> <span class="nc">Model</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Manual</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;DeepLabCut Models applied to generate pose estimations.</span>
 
@@ -1844,13 +1844,13 @@ snapshotindex, and trainingsetindex.</p>
 
         <details class="quote">
           <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">306</span>
-<span class="normal">307</span>
-<span class="normal">308</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">308</span>
 <span class="normal">309</span>
 <span class="normal">310</span>
 <span class="normal">311</span>
-<span class="normal">312</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">BodyPart</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Part</span><span class="p">):</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">BodyPart</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Part</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Body parts associated with a given model&quot;&quot;&quot;</span>
 
     <span class="n">definition</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -2005,9 +2005,7 @@ snapshotindex, and trainingsetindex.</p>
 
       <details class="quote">
         <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">314</span>
-<span class="normal">315</span>
-<span class="normal">316</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">316</span>
 <span class="normal">317</span>
 <span class="normal">318</span>
 <span class="normal">319</span>
@@ -2117,7 +2115,9 @@ snapshotindex, and trainingsetindex.</p>
 <span class="normal">423</span>
 <span class="normal">424</span>
 <span class="normal">425</span>
-<span class="normal">426</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
 <span class="k">def</span> <span class="nf">insert_new_model</span><span class="p">(</span>
     <span class="bp">cls</span><span class="p">,</span>
     <span class="n">model_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -2266,9 +2266,7 @@ snapshotindex, and trainingsetindex.</p>
 
         <details class="quote">
           <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">429</span>
-<span class="normal">430</span>
-<span class="normal">431</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">431</span>
 <span class="normal">432</span>
 <span class="normal">433</span>
 <span class="normal">434</span>
@@ -2334,7 +2332,9 @@ snapshotindex, and trainingsetindex.</p>
 <span class="normal">494</span>
 <span class="normal">495</span>
 <span class="normal">496</span>
-<span class="normal">497</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
+<span class="normal">497</span>
+<span class="normal">498</span>
+<span class="normal">499</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
 <span class="k">class</span> <span class="nc">ModelEvaluation</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Computed</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Performance characteristics model calculated by `deeplabcut.evaluate_network`</span>
 
@@ -2434,9 +2434,7 @@ snapshotindex, and trainingsetindex.</p>
 
       <details class="quote">
         <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">447</span>
-<span class="normal">448</span>
-<span class="normal">449</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">449</span>
 <span class="normal">450</span>
 <span class="normal">451</span>
 <span class="normal">452</span>
@@ -2484,7 +2482,9 @@ snapshotindex, and trainingsetindex.</p>
 <span class="normal">494</span>
 <span class="normal">495</span>
 <span class="normal">496</span>
-<span class="normal">497</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+<span class="normal">497</span>
+<span class="normal">498</span>
+<span class="normal">499</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;.populate() method will launch evaulation for each unique entry in Model.&quot;&quot;&quot;</span>
     <span class="n">dlc_config</span><span class="p">,</span> <span class="n">project_path</span><span class="p">,</span> <span class="n">model_prefix</span><span class="p">,</span> <span class="n">shuffle</span><span class="p">,</span> <span class="n">trainingsetindex</span> <span class="o">=</span> <span class="p">(</span>
         <span class="n">Model</span> <span class="o">&amp;</span> <span class="n">key</span>
@@ -2571,9 +2571,7 @@ snapshotindex, and trainingsetindex.</p>
 
         <details class="quote">
           <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">591</span>
-<span class="normal">592</span>
-<span class="normal">593</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">593</span>
 <span class="normal">594</span>
 <span class="normal">595</span>
 <span class="normal">596</span>
@@ -2682,7 +2680,9 @@ snapshotindex, and trainingsetindex.</p>
 <span class="normal">699</span>
 <span class="normal">700</span>
 <span class="normal">701</span>
-<span class="normal">702</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
+<span class="normal">702</span>
+<span class="normal">703</span>
+<span class="normal">704</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
 <span class="k">class</span> <span class="nc">PoseEstimation</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Computed</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Results of pose estimation.</span>
 
@@ -2829,9 +2829,7 @@ snapshotindex, and trainingsetindex.</p>
 
         <details class="quote">
           <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">603</span>
-<span class="normal">604</span>
-<span class="normal">605</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">605</span>
 <span class="normal">606</span>
 <span class="normal">607</span>
 <span class="normal">608</span>
@@ -2842,7 +2840,9 @@ snapshotindex, and trainingsetindex.</p>
 <span class="normal">613</span>
 <span class="normal">614</span>
 <span class="normal">615</span>
-<span class="normal">616</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">BodyPartPosition</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Part</span><span class="p">):</span>
+<span class="normal">616</span>
+<span class="normal">617</span>
+<span class="normal">618</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">BodyPartPosition</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Part</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Position of individual body parts by frame index&quot;&quot;&quot;</span>
 
     <span class="n">definition</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; # uses DeepLabCut h5 output for body part position</span>
@@ -2954,9 +2954,7 @@ and x/y coordinates of each joint name for a camera_id, similar to
 
       <details class="quote">
         <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">666</span>
-<span class="normal">667</span>
-<span class="normal">668</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">668</span>
 <span class="normal">669</span>
 <span class="normal">670</span>
 <span class="normal">671</span>
@@ -2990,7 +2988,9 @@ and x/y coordinates of each joint name for a camera_id, similar to
 <span class="normal">699</span>
 <span class="normal">700</span>
 <span class="normal">701</span>
-<span class="normal">702</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="normal">702</span>
+<span class="normal">703</span>
+<span class="normal">704</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
 <span class="k">def</span> <span class="nf">get_trajectory</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">body_parts</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Returns a pandas dataframe of coordinates of the specified body_part(s)</span>
 
@@ -3049,9 +3049,7 @@ and x/y coordinates of each joint name for a camera_id, similar to
 
       <details class="quote">
         <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">618</span>
-<span class="normal">619</span>
-<span class="normal">620</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">620</span>
 <span class="normal">621</span>
 <span class="normal">622</span>
 <span class="normal">623</span>
@@ -3095,7 +3093,9 @@ and x/y coordinates of each joint name for a camera_id, similar to
 <span class="normal">661</span>
 <span class="normal">662</span>
 <span class="normal">663</span>
-<span class="normal">664</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+<span class="normal">664</span>
+<span class="normal">665</span>
+<span class="normal">666</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;.populate() method will launch training for each PoseEstimationTask&quot;&quot;&quot;</span>
     <span class="c1"># ID model and directories</span>
     <span class="n">dlc_model</span> <span class="o">=</span> <span class="p">(</span><span class="n">Model</span> <span class="o">&amp;</span> <span class="n">key</span><span class="p">)</span><span class="o">.</span><span class="n">fetch1</span><span class="p">()</span>
@@ -3178,9 +3178,7 @@ and x/y coordinates of each joint name for a camera_id, similar to
 
         <details class="quote">
           <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">500</span>
-<span class="normal">501</span>
-<span class="normal">502</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">502</span>
 <span class="normal">503</span>
 <span class="normal">504</span>
 <span class="normal">505</span>
@@ -3266,7 +3264,9 @@ and x/y coordinates of each joint name for a camera_id, similar to
 <span class="normal">585</span>
 <span class="normal">586</span>
 <span class="normal">587</span>
-<span class="normal">588</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
+<span class="normal">588</span>
+<span class="normal">589</span>
+<span class="normal">590</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
 <span class="k">class</span> <span class="nc">PoseEstimationTask</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Manual</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Staging table for pairing of video recording and model before inference.</span>
 
@@ -3436,9 +3436,7 @@ Based on convention: / video_dir / Device_{}<em>Recording</em>{}<em>Model</em>{}
 
       <details class="quote">
         <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">516</span>
-<span class="normal">517</span>
-<span class="normal">518</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">518</span>
 <span class="normal">519</span>
 <span class="normal">520</span>
 <span class="normal">521</span>
@@ -3473,7 +3471,9 @@ Based on convention: / video_dir / Device_{}<em>Recording</em>{}<em>Model</em>{}
 <span class="normal">550</span>
 <span class="normal">551</span>
 <span class="normal">552</span>
-<span class="normal">553</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="normal">553</span>
+<span class="normal">554</span>
+<span class="normal">555</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
 <span class="k">def</span> <span class="nf">infer_output_dir</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">relative</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">mkdir</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Return the expected pose_estimation_output_dir.</span>
 
@@ -3604,9 +3604,7 @@ dynamic, robust_nframes, allow_growth, use_shelve</p></td>
 
       <details class="quote">
         <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">555</span>
-<span class="normal">556</span>
-<span class="normal">557</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">557</span>
 <span class="normal">558</span>
 <span class="normal">559</span>
 <span class="normal">560</span>
@@ -3637,7 +3635,9 @@ dynamic, robust_nframes, allow_growth, use_shelve</p></td>
 <span class="normal">585</span>
 <span class="normal">586</span>
 <span class="normal">587</span>
-<span class="normal">588</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="normal">588</span>
+<span class="normal">589</span>
+<span class="normal">590</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
 <span class="k">def</span> <span class="nf">insert_estimation_task</span><span class="p">(</span>
     <span class="bp">cls</span><span class="p">,</span>
     <span class="n">key</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
@@ -3707,9 +3707,7 @@ dynamic, robust_nframes, allow_growth, use_shelve</p></td>
 
         <details class="quote">
           <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">143</span>
 <span class="normal">144</span>
 <span class="normal">145</span>
 <span class="normal">146</span>
@@ -3760,7 +3758,9 @@ dynamic, robust_nframes, allow_growth, use_shelve</p></td>
 <span class="normal">191</span>
 <span class="normal">192</span>
 <span class="normal">193</span>
-<span class="normal">194</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
 <span class="k">class</span> <span class="nc">RecordingInfo</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Imported</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Automated table with video file metadata.</span>
 
@@ -3849,10 +3849,10 @@ dynamic, robust_nframes, allow_growth, use_shelve</p></td>
 
       <details class="quote">
         <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">key_source</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Defines order of keys for make function when called via `populate()`&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">VideoRecording</span> <span class="o">&amp;</span> <span class="n">VideoRecording</span><span class="o">.</span><span class="n">File</span>
@@ -3878,9 +3878,7 @@ dynamic, robust_nframes, allow_growth, use_shelve</p></td>
 
       <details class="quote">
         <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">165</span>
 <span class="normal">166</span>
 <span class="normal">167</span>
 <span class="normal">168</span>
@@ -3909,7 +3907,9 @@ dynamic, robust_nframes, allow_growth, use_shelve</p></td>
 <span class="normal">191</span>
 <span class="normal">192</span>
 <span class="normal">193</span>
-<span class="normal">194</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Populates table with video metadata using CV2.&quot;&quot;&quot;</span>
     <span class="n">file_paths</span> <span class="o">=</span> <span class="p">(</span><span class="n">VideoRecording</span><span class="o">.</span><span class="n">File</span> <span class="o">&amp;</span> <span class="n">key</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;file_path&quot;</span><span class="p">)</span>
 
@@ -3972,6 +3972,7 @@ dynamic, robust_nframes, allow_growth, use_shelve</p></td>
 
   
       <p>Set of video recordings for DLC inferences.</p>
+<p>Refer to the <code>definition</code> attribute for the table design.</p>
 
 
         <details class="quote">
@@ -3998,9 +3999,13 @@ dynamic, robust_nframes, allow_growth, use_shelve</p></td>
 <span class="normal">135</span>
 <span class="normal">136</span>
 <span class="normal">137</span>
-<span class="normal">138</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
 <span class="k">class</span> <span class="nc">VideoRecording</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Manual</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Set of video recordings for DLC inferences.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Set of video recordings for DLC inferences.</span>
+
+<span class="sd">    Refer to the `definition` attribute for the table design.&quot;&quot;&quot;</span>
 
     <span class="n">definition</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">    -&gt; Session</span>
@@ -4057,9 +4062,7 @@ dynamic, robust_nframes, allow_growth, use_shelve</p></td>
 
         <details class="quote">
           <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">129</span>
 <span class="normal">130</span>
 <span class="normal">131</span>
 <span class="normal">132</span>
@@ -4068,7 +4071,9 @@ dynamic, robust_nframes, allow_growth, use_shelve</p></td>
 <span class="normal">135</span>
 <span class="normal">136</span>
 <span class="normal">137</span>
-<span class="normal">138</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Part</span><span class="p">):</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Part</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;File IDs and paths associated with a given recording_id</span>
 
 <span class="sd">    Refer to the `definition` attribute for the table design.</span>
@@ -4422,13 +4427,13 @@ string or list of strongs for possible root data directories.</p>
 
       <details class="quote">
         <summary>Source code in <code>element_deeplabcut/model.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">705</span>
-<span class="normal">706</span>
-<span class="normal">707</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">707</span>
 <span class="normal">708</span>
 <span class="normal">709</span>
 <span class="normal">710</span>
-<span class="normal">711</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">str_to_bool</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="normal">711</span>
+<span class="normal">712</span>
+<span class="normal">713</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">str_to_bool</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return whether the provided string represents true. Otherwise false.&quot;&quot;&quot;</span>
     <span class="c1"># Due to distutils equivalent depreciation in 3.10</span>
     <span class="c1"># Adopted from github.com/PostHog/posthog/blob/master/posthog/utils.py</span>
