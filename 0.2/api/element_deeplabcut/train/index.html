@@ -410,54 +410,26 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../__init__/" class="md-nav__link">
-        __init__.py
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_2" type="checkbox" id="__nav_5_1_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_1" type="checkbox" id="__nav_5_1_1" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_5_1_2">
+        <label class="md-nav__link" for="__nav_5_1_1">
           export
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="export" data-md-level="3">
-        <label class="md-nav__title" for="__nav_5_1_2">
+        <label class="md-nav__title" for="__nav_5_1_1">
           <span class="md-nav__icon md-icon"></span>
           export
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../export/__init__/" class="md-nav__link">
-        __init__.py
-      </a>
-    </li>
-  
-
-            
           
             
               
@@ -503,36 +475,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_4" type="checkbox" id="__nav_5_1_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_3" type="checkbox" id="__nav_5_1_3" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_5_1_4">
+        <label class="md-nav__link" for="__nav_5_1_3">
           readers
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="readers" data-md-level="3">
-        <label class="md-nav__title" for="__nav_5_1_4">
+        <label class="md-nav__title" for="__nav_5_1_3">
           <span class="md-nav__icon md-icon"></span>
           readers
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../readers/__init__/" class="md-nav__link">
-        __init__.py
-      </a>
-    </li>
-  
-
-            
           
             
               
@@ -747,20 +705,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workflow_deeplabcut/__init__/" class="md-nav__link">
-        __init__.py
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../workflow_deeplabcut/ingest/" class="md-nav__link">
         ingest.py
       </a>
@@ -860,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about/changelog/" class="md-nav__link">
+      <a href="../../../changelog/" class="md-nav__link">
         Changelog
       </a>
     </li>
@@ -922,27 +866,45 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 
   
       <p>Automated Model training information.</p>
-<p>Refer to the <code>definition</code> attribute for the table design.</p>
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>TrainingTask</code></td>
+          <td>
+                <code>foreign key</code>
+          </td>
+          <td><p>TrainingTask key.</p></td>
+        </tr>
+        <tr>
+          <td><code>latest_snapshot</code></td>
+          <td>
+                <code>int unsigned</code>
+          </td>
+          <td><p>Latest exact snapshot index (i.e., never -1).</p></td>
+        </tr>
+        <tr>
+          <td><code>config_template</code></td>
+          <td>
+                <code>longblob</code>
+          </td>
+          <td><p>Stored full config file.</p></td>
+        </tr>
+    </tbody>
+  </table>
 
 
         <details class="quote">
           <summary>Source code in <code>element_deeplabcut/train.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">219</span>
-<span class="normal">220</span>
-<span class="normal">221</span>
-<span class="normal">222</span>
-<span class="normal">223</span>
-<span class="normal">224</span>
-<span class="normal">225</span>
-<span class="normal">226</span>
-<span class="normal">227</span>
-<span class="normal">228</span>
-<span class="normal">229</span>
-<span class="normal">230</span>
-<span class="normal">231</span>
-<span class="normal">232</span>
-<span class="normal">233</span>
-<span class="normal">234</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">234</span>
 <span class="normal">235</span>
 <span class="normal">236</span>
 <span class="normal">237</span>
@@ -1006,11 +968,32 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 <span class="normal">295</span>
 <span class="normal">296</span>
 <span class="normal">297</span>
-<span class="normal">298</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
 <span class="k">class</span> <span class="nc">ModelTraining</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Computed</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Automated Model training information.</span>
 
-<span class="sd">    Refer to the `definition` attribute for the table design.&quot;&quot;&quot;</span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        TrainingTask (foreign key): TrainingTask key.</span>
+<span class="sd">        latest_snapshot (int unsigned): Latest exact snapshot index (i.e., never -1).</span>
+<span class="sd">        config_template (longblob): Stored full config file.&quot;&quot;&quot;</span>
 
     <span class="n">definition</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">    -&gt; TrainingTask</span>
@@ -1117,25 +1100,7 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 
       <details class="quote">
         <summary>Source code in <code>element_deeplabcut/train.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">235</span>
-<span class="normal">236</span>
-<span class="normal">237</span>
-<span class="normal">238</span>
-<span class="normal">239</span>
-<span class="normal">240</span>
-<span class="normal">241</span>
-<span class="normal">242</span>
-<span class="normal">243</span>
-<span class="normal">244</span>
-<span class="normal">245</span>
-<span class="normal">246</span>
-<span class="normal">247</span>
-<span class="normal">248</span>
-<span class="normal">249</span>
-<span class="normal">250</span>
-<span class="normal">251</span>
-<span class="normal">252</span>
-<span class="normal">253</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">253</span>
 <span class="normal">254</span>
 <span class="normal">255</span>
 <span class="normal">256</span>
@@ -1180,7 +1145,25 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 <span class="normal">295</span>
 <span class="normal">296</span>
 <span class="normal">297</span>
-<span class="normal">298</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Launch training for each train.TrainingTask training_id via `.populate()`.&quot;&quot;&quot;</span>
     <span class="n">project_path</span><span class="p">,</span> <span class="n">model_prefix</span> <span class="o">=</span> <span class="p">(</span><span class="n">TrainingTask</span> <span class="o">&amp;</span> <span class="n">key</span><span class="p">)</span><span class="o">.</span><span class="n">fetch1</span><span class="p">(</span>
         <span class="s2">&quot;project_path&quot;</span><span class="p">,</span> <span class="s2">&quot;model_prefix&quot;</span>
@@ -1275,15 +1258,59 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 
   
       <p>Parameters used to train a model</p>
-<p>Refer to the <code>definition</code> attribute for the table design.</p>
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>paramset_idx</code></td>
+          <td>
+                <code>smallint</code>
+          </td>
+          <td><p>Index uniqely identifying paramset.</p></td>
+        </tr>
+        <tr>
+          <td><code>paramset_desc</code></td>
+          <td>
+                <code> varchar(128) </code>
+          </td>
+          <td><p>Description of paramset.</p></td>
+        </tr>
+        <tr>
+          <td><code>param_set_hash</code></td>
+          <td>
+                <code>uuid</code>
+          </td>
+          <td><p>Hash identifying this paramset.</p></td>
+        </tr>
+        <tr>
+          <td><code>params</code></td>
+          <td>
+                <code>longblob</code>
+          </td>
+          <td><p>Dictionary of all applicable parameters.</p></td>
+        </tr>
+        <tr>
+          <td><code>Note</code></td>
+          <td>
+                <code>longblob</code>
+          </td>
+          <td><p>param_set_hash must be unique.</p></td>
+        </tr>
+    </tbody>
+  </table>
 
 
         <details class="quote">
           <summary>Source code in <code>element_deeplabcut/train.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">141</span>
 <span class="normal">142</span>
 <span class="normal">143</span>
 <span class="normal">144</span>
@@ -1342,11 +1369,24 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 <span class="normal">197</span>
 <span class="normal">198</span>
 <span class="normal">199</span>
-<span class="normal">200</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
 <span class="k">class</span> <span class="nc">TrainingParamSet</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Lookup</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Parameters used to train a model</span>
 
-<span class="sd">    Refer to the `definition` attribute for the table design.&quot;&quot;&quot;</span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        paramset_idx (smallint): Index uniqely identifying paramset.</span>
+<span class="sd">        paramset_desc ( varchar(128) ): Description of paramset.</span>
+<span class="sd">        param_set_hash (uuid): Hash identifying this paramset.</span>
+<span class="sd">        params (longblob): Dictionary of all applicable parameters.</span>
+<span class="sd">        Note: param_set_hash must be unique.&quot;&quot;&quot;</span>
 
     <span class="n">definition</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">    # Parameters to specify a DLC model training instance</span>
@@ -1487,15 +1527,7 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 
       <details class="quote">
         <summary>Source code in <code>element_deeplabcut/train.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">166</span>
 <span class="normal">167</span>
 <span class="normal">168</span>
 <span class="normal">169</span>
@@ -1529,7 +1561,15 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 <span class="normal">197</span>
 <span class="normal">198</span>
 <span class="normal">199</span>
-<span class="normal">200</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@classmethod</span>
 <span class="k">def</span> <span class="nf">insert_new_params</span><span class="p">(</span>
     <span class="bp">cls</span><span class="p">,</span> <span class="n">paramset_desc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">paramset_idx</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">):</span>
@@ -1603,29 +1643,91 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 
   
       <p>Staging table for pairing videosets and training parameter sets</p>
-<p>Refer to the <code>definition</code> attribute for the table design.</p>
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>VideoSet</code></td>
+          <td>
+                <code>foreign key</code>
+          </td>
+          <td><p>VideoSet Key.</p></td>
+        </tr>
+        <tr>
+          <td><code>TrainingParamSet</code></td>
+          <td>
+                <code>foreign key</code>
+          </td>
+          <td><p>TrainingParamSet key.</p></td>
+        </tr>
+        <tr>
+          <td><code>training_id</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td><p>Unique ID for training task.</p></td>
+        </tr>
+        <tr>
+          <td><code>model_prefix</code></td>
+          <td>
+                <code> varchar(32) </code>
+          </td>
+          <td><p>Optional. Prefix for model files.</p></td>
+        </tr>
+        <tr>
+          <td><code>project_path</code></td>
+          <td>
+                <code> varchar(255) </code>
+          </td>
+          <td><p>Optional. DLC's project_path in config relative
+                           to get_dlc_root_data_dir</p></td>
+        </tr>
+    </tbody>
+  </table>
 
 
         <details class="quote">
           <summary>Source code in <code>element_deeplabcut/train.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">203</span>
-<span class="normal">204</span>
-<span class="normal">205</span>
-<span class="normal">206</span>
-<span class="normal">207</span>
-<span class="normal">208</span>
-<span class="normal">209</span>
-<span class="normal">210</span>
-<span class="normal">211</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">211</span>
 <span class="normal">212</span>
 <span class="normal">213</span>
 <span class="normal">214</span>
 <span class="normal">215</span>
-<span class="normal">216</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
 <span class="k">class</span> <span class="nc">TrainingTask</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Manual</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Staging table for pairing videosets and training parameter sets</span>
 
-<span class="sd">    Refer to the `definition` attribute for the table design.&quot;&quot;&quot;</span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        VideoSet (foreign key): VideoSet Key.</span>
+<span class="sd">        TrainingParamSet (foreign key): TrainingParamSet key.</span>
+<span class="sd">        training_id (int): Unique ID for training task.</span>
+<span class="sd">        model_prefix ( varchar(32) ): Optional. Prefix for model files.</span>
+<span class="sd">        project_path ( varchar(255) ): Optional. DLC&#39;s project_path in config relative</span>
+<span class="sd">                                       to get_dlc_root_data_dir</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">definition</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;      # Specification for a DLC model training instance</span>
 <span class="s2">    -&gt; VideoSet           # labeled video(s) for training</span>
@@ -1675,7 +1777,26 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 
   
       <p>Collection of videos included in a given training set.</p>
-<p>Refer to the <code>definition</code> attribute for the table design.</p>
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>video_set_id</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td><p>Unique ID for collection of videos.</p></td>
+        </tr>
+    </tbody>
+  </table>
 
 
         <details class="quote">
@@ -1700,11 +1821,15 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 <span class="normal">132</span>
 <span class="normal">133</span>
 <span class="normal">134</span>
-<span class="normal">135</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@schema</span>
 <span class="k">class</span> <span class="nc">VideoSet</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Manual</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Collection of videos included in a given training set.</span>
 
-<span class="sd">    Refer to the `definition` attribute for the table design.&quot;&quot;&quot;</span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        video_set_id (int): Unique ID for collection of videos.&quot;&quot;&quot;</span>
 
     <span class="n">definition</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; # Set of vids in training set</span>
 <span class="s2">    video_set_id: int</span>
@@ -1713,7 +1838,9 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
     <span class="k">class</span> <span class="nc">File</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Part</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;File IDs and paths in a given VideoSet</span>
 
-<span class="sd">        Refer to the `definition` attribute for the table design.&quot;&quot;&quot;</span>
+<span class="sd">        Attributes:</span>
+<span class="sd">            VideoSet (foreign key): VideoSet key.</span>
+<span class="sd">            file_path ( varchar(255) ): Path to file on disk relative to root.&quot;&quot;&quot;</span>
 
         <span class="n">definition</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; # Paths of training files (e.g., labeled pngs, CSV or video)</span>
 <span class="s2">        -&gt; master</span>
@@ -1752,13 +1879,38 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 
   
       <p>File IDs and paths in a given VideoSet</p>
-<p>Refer to the <code>definition</code> attribute for the table design.</p>
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>VideoSet</code></td>
+          <td>
+                <code>foreign key</code>
+          </td>
+          <td><p>VideoSet key.</p></td>
+        </tr>
+        <tr>
+          <td><code>file_path</code></td>
+          <td>
+                <code> varchar(255) </code>
+          </td>
+          <td><p>Path to file on disk relative to root.</p></td>
+        </tr>
+    </tbody>
+  </table>
 
 
         <details class="quote">
           <summary>Source code in <code>element_deeplabcut/train.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">125</span>
-<span class="normal">126</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">126</span>
 <span class="normal">127</span>
 <span class="normal">128</span>
 <span class="normal">129</span>
@@ -1767,10 +1919,15 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
 <span class="normal">132</span>
 <span class="normal">133</span>
 <span class="normal">134</span>
-<span class="normal">135</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Part</span><span class="p">):</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">(</span><span class="n">dj</span><span class="o">.</span><span class="n">Part</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;File IDs and paths in a given VideoSet</span>
 
-<span class="sd">    Refer to the `definition` attribute for the table design.&quot;&quot;&quot;</span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        VideoSet (foreign key): VideoSet key.</span>
+<span class="sd">        file_path ( varchar(255) ): Path to file on disk relative to root.&quot;&quot;&quot;</span>
 
     <span class="n">definition</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; # Paths of training files (e.g., labeled pngs, CSV or video)</span>
 <span class="s2">    -&gt; master</span>
@@ -1862,8 +2019,8 @@ DataJoint Schema for DeepLabCut 2.x, Supports 2D and 3D DLC via triangulation.</
           <td>
                 <code>str</code>
           </td>
-          <td><p>when True (default), create schema tabkes in the database if
-                they do not yet exist.</p></td>
+          <td><p>when True (default), create schema tabkes in the database
+                 if they do not yet exist.</p></td>
           <td>
                 <code>True</code>
           </td>
@@ -1947,8 +2104,8 @@ get_dlc_processed_data_dir(): Optional. Returns absolute path for processed
 <span class="sd">        train_schema_name (str): schema name on the database server</span>
 <span class="sd">        create_schema (bool): when True (default), create schema in the database if it</span>
 <span class="sd">                            does not yet exist.</span>
-<span class="sd">        create_tables (str): when True (default), create schema tabkes in the database if</span>
-<span class="sd">                            they do not yet exist.</span>
+<span class="sd">        create_tables (str): when True (default), create schema tabkes in the database</span>
+<span class="sd">                             if they do not yet exist.</span>
 <span class="sd">        linking_module (str): a module (or name) containing the required dependencies.</span>
 
 <span class="sd">    Dependencies:</span>

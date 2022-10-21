@@ -358,6 +358,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#element-features" class="md-nav__link">
+    Element Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#element-architecture" class="md-nav__link">
     Element Architecture
   </a>
@@ -402,13 +409,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#element-features" class="md-nav__link">
-    Element Features
-  </a>
   
 </li>
       
@@ -523,54 +523,26 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../api/element_deeplabcut/__init__/" class="md-nav__link">
-        __init__.py
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_2" type="checkbox" id="__nav_5_1_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_1" type="checkbox" id="__nav_5_1_1" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_5_1_2">
+        <label class="md-nav__link" for="__nav_5_1_1">
           export
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="export" data-md-level="3">
-        <label class="md-nav__title" for="__nav_5_1_2">
+        <label class="md-nav__title" for="__nav_5_1_1">
           <span class="md-nav__icon md-icon"></span>
           export
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/element_deeplabcut/export/__init__/" class="md-nav__link">
-        __init__.py
-      </a>
-    </li>
-  
-
-            
           
             
               
@@ -616,36 +588,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_4" type="checkbox" id="__nav_5_1_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_3" type="checkbox" id="__nav_5_1_3" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_5_1_4">
+        <label class="md-nav__link" for="__nav_5_1_3">
           readers
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="readers" data-md-level="3">
-        <label class="md-nav__title" for="__nav_5_1_4">
+        <label class="md-nav__title" for="__nav_5_1_3">
           <span class="md-nav__icon md-icon"></span>
           readers
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/element_deeplabcut/readers/__init__/" class="md-nav__link">
-        __init__.py
-      </a>
-    </li>
-  
-
-            
           
             
               
@@ -728,20 +686,6 @@
           workflow_deeplabcut
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/workflow_deeplabcut/__init__/" class="md-nav__link">
-        __init__.py
-      </a>
-    </li>
-  
-
-            
           
             
               
@@ -848,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/changelog/" class="md-nav__link">
+      <a href="../changelog/" class="md-nav__link">
         Changelog
       </a>
     </li>
@@ -877,7 +821,11 @@
 
 <h1 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h1>
 <h2 id="pose-estimation-in-neurophysiology">Pose Estimation in Neurophysiology<a class="headerlink" href="#pose-estimation-in-neurophysiology" title="Permanent link">&para;</a></h2>
-<p>Studying the inner workings of the brain requires understanding the relationship between neural activity and environmental stimuli, natural behavior, or inferred cognitive states. Pose estimation is a computer vision method to track the position, and thereby behavior, of the subject over the course of an experiment, which can then be paired with neuronal recordings to answer scientific questions about the brain.</p>
+<p>Studying the inner workings of the brain requires understanding the relationship between
+neural activity and environmental stimuli, natural behavior, or inferred cognitive
+states. Pose estimation is a computer vision method to track the position, and thereby
+behavior, of the subject over the course of an experiment, which can then be paired with
+neuronal recordings to answer scientific questions about the brain.</p>
 <p>Previous pose estimation methods required reflective markers placed on a subject, as
 well as multiple expensive high-frame-rate infrared cameras to triangulate position
 within a limited field. Recent advancements in machine learning have facilitated
@@ -885,14 +833,11 @@ dramatic advancements in capturing pose data with a video camera alone. In parti
 <a href="http://deeplabcut.org/">DeepLabCut</a> (DLC) facilitates the use of pre-trained machine 
 learning models for 2-D and
 3-D non-invasive markerless pose estimation. </p>
-<p>By training a model, DLC takes a machine learning process in its current state
-and refining it to specialize in the video data collected in our experiment. This 
-process works best when the camera has a consistent field of view across sessions, and
-when generating pose estimation inferences on consistent data sets (e.g., subjects with 
-similar characteristics). DLC saves models at various checkpoints and recommends
-training for approximately 200,000 iterations. When DLC generates pose estimation 
-inferences, this model is applied to novel videos, generating predictions of where the
-same set of training points would be in this new situation.</p>
+<p>DeepLabCut offers the ability to continue training an exisiting object detection model 
+to further specialize in videos in the training data set. In other words, researchers
+can take a well-known generalizable machine learning model and apply it to their 
+experimental setup, making it relatively easy to produce pose estimation inferences 
+for subsequent experimental sessions.</p>
 <p>While some alternative tools are either species-specific (e.g.,
 <a href="https://github.com/NeLy-EPFL/DeepFly3D">DeepFly3D</a>) or uniquely 2D (e.g.,
 <a href="https://github.com/jgraving/DeepPoseKit">DeepPoseKit</a>), DLC highlights a diversity of
@@ -937,10 +882,26 @@ interfaces.</p>
 <ul>
 <li>James Cotton Lab (Northwestern University)</li>
 </ul>
+<h2 id="element-features">Element Features<a class="headerlink" href="#element-features" title="Permanent link">&para;</a></h2>
+<p>Development of the Element began with an <a href="https://github.com/MMathisLab/DataJoint_Demo_DeepLabCut">open source
+repository</a> shared by the
+Mathis team. We further identified common needs across our respective partnerships to
+offer the following features for single-camera 2D models:</p>
+<ul>
+<li>Manage training data and configuration parameters</li>
+<li>Launch model training</li>
+<li>Evaluate models automatically and directly compare models</li>
+<li>Manage model metadata</li>
+<li>Launch inference video analysis </li>
+<li>Capture pose estimation output for each session</li>
+</ul>
 <h2 id="element-architecture">Element Architecture<a class="headerlink" href="#element-architecture" title="Permanent link">&para;</a></h2>
-<p>Each node in the following diagram represents the analysis code in the workflow and the corresponding tables in the database.  Within the workflow, Element DeepLabCut connects to upstream Elements including Lab, Animal, and Session.  For more detailed documentation on each table, see the API docs for the respective schemas.</p>
+<p>Each node in the following diagram represents the analysis code in the workflow and the
+corresponding tables in the database.  Within the workflow, Element DeepLabCut connects
+to upstream Elements including Lab, Animal, and Session.  For more detailed
+documentation on each table, see the API docs for the respective schemas.</p>
 <p><img alt="element-deeplabcut diagram" src="https://raw.githubusercontent.com/datajoint/element-deeplabcut/main/images/diagram_dlc.svg" /></p>
-<h3 id="lab-schema-api-docs"><code>lab</code> schema (<a href="https://datajoint.com/docs/workflow-deeplabcut/api/workflow_deeplabcut/pipeline/#workflow_deeplabcut.pipeline.Device">API docs</a>)<a class="headerlink" href="#lab-schema-api-docs" title="Permanent link">&para;</a></h3>
+<h3 id="lab-schema-api-docs"><code>lab</code> schema (<a href="./api/workflow_deeplabcut/pipeline/#workflow_deeplabcut.pipeline.Device">API docs</a>)<a class="headerlink" href="#lab-schema-api-docs" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -955,7 +916,7 @@ interfaces.</p>
 </tr>
 </tbody>
 </table>
-<h3 id="subject-schema-api-docs"><code>subject</code> schema (<a href="https://datajoint.com/docs/element-animal/api/element_animal/subject">API docs</a>)<a class="headerlink" href="#subject-schema-api-docs" title="Permanent link">&para;</a></h3>
+<h3 id="subject-schema-api-docs"><code>subject</code> schema (<a href="../element-animal/api/element_animal/subject">API docs</a>)<a class="headerlink" href="#subject-schema-api-docs" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Although not required, most choose to connect the <code>Session</code> table to a <code>Subject</code> table.</li>
 </ul>
@@ -973,7 +934,7 @@ interfaces.</p>
 </tr>
 </tbody>
 </table>
-<h3 id="session-schema-api-docs"><code>session</code> schema (<a href="https://datajoint.com/docs/element-session/api/element_session/session_with_datetime">API docs</a>)<a class="headerlink" href="#session-schema-api-docs" title="Permanent link">&para;</a></h3>
+<h3 id="session-schema-api-docs"><code>session</code> schema (<a href="../element-session/api/element_session/session_with_datetime">API docs</a>)<a class="headerlink" href="#session-schema-api-docs" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -988,7 +949,7 @@ interfaces.</p>
 </tr>
 </tbody>
 </table>
-<h3 id="train-schema-api-docs"><code>train</code> schema (<a href="/api/element_deeplabcut/train">API docs</a>)<a class="headerlink" href="#train-schema-api-docs" title="Permanent link">&para;</a></h3>
+<h3 id="train-schema-api-docs"><code>train</code> schema (<a href="./api/element_deeplabcut/train">API docs</a>)<a class="headerlink" href="#train-schema-api-docs" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Optional tables related to model training.</li>
 </ul>
@@ -1018,7 +979,7 @@ interfaces.</p>
 </tr>
 </tbody>
 </table>
-<h3 id="model-schema-api"><code>model</code> schema (<a href="/api/element_deeplabcut/model">API</a>)<a class="headerlink" href="#model-schema-api" title="Permanent link">&para;</a></h3>
+<h3 id="model-schema-api"><code>model</code> schema (<a href="./api/element_deeplabcut/model">API</a>)<a class="headerlink" href="#model-schema-api" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Tables related to DeepLabCut models and pose estimation. The <code>model</code> schema can be used without the <code>train</code> schema.</li>
 </ul>
@@ -1056,23 +1017,12 @@ interfaces.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="element-features">Element Features<a class="headerlink" href="#element-features" title="Permanent link">&para;</a></h2>
-<p>Development of the Element began with an <a href="https://github.com/MMathisLab/DataJoint_Demo_DeepLabCut">open source
-repository</a> shared by the
-Mathis team. We further identified common needs across our respective partnerships to
-offer the following features for single-camera 2D models:</p>
-<ul>
-<li>Manage training data and configuration parameters</li>
-<li>Launch model training</li>
-<li>Evaluate models automatically and directly compare models</li>
-<li>Manage model metadata</li>
-<li>Launch inference video analysis </li>
-<li>Capture pose estimation output for each session</li>
-</ul>
 <h2 id="data-export-and-publishing">Data Export and Publishing<a class="headerlink" href="#data-export-and-publishing" title="Permanent link">&para;</a></h2>
 <p>Element DeepLabCut includes an export function that saves the outputs as a Neurodata Without Borders (NWB) file.  By running a single command, the data from an experimental session is saved to a NWB file.</p>
 <p>For more details on the export function, see the <a href="/tutorials">Tutorials page</a>.</p>
 <p>Once NWB files are generated they can be readily shared with collaborators and published on <a href="https://dandiarchive.org/">DANDI Archive</a>.  The DataJoint Elements ecosystem includes a function to upload the NWB files to DANDI (see <a href="datajoint.com/docs/elements/element-interface/">Element Interface</a>).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dlc_session_to_nwb</span><span class="p">(</span><span class="n">pose_key</span><span class="p">,</span> <span class="n">use_element_session</span><span class="p">,</span> <span class="n">session_kwargs</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="roadmap">Roadmap<a class="headerlink" href="#roadmap" title="Permanent link">&para;</a></h2>
 <p>Further development of this Element is community driven.  Upon user requests and based on guidance from the Scientific Steering Group we will add the following features to this Element:</p>
 <ul>
