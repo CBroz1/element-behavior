@@ -85,4 +85,44 @@
          <lastmod>2022-12-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>http://localhost/docs/elements/element-deeplabcut/0.2/tutorials/00-DataDownload_Optional/</loc>
+         <lastmod>2022-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://localhost/docs/elements/element-deeplabcut/0.2/tutorials/01-Configure/</loc>
+         <lastmod>2022-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://localhost/docs/elements/element-deeplabcut/0.2/tutorials/02-WorkflowStructure_Optional/</loc>
+         <lastmod>2022-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://localhost/docs/elements/element-deeplabcut/0.2/tutorials/03-Process/</loc>
+         <lastmod>2022-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://localhost/docs/elements/element-deeplabcut/0.2/tutorials/04-Automate_Optional/</loc>
+         <lastmod>2022-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://localhost/docs/elements/element-deeplabcut/0.2/tutorials/05-Visualization_Optional/</loc>
+         <lastmod>2022-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://localhost/docs/elements/element-deeplabcut/0.2/tutorials/06-Drop_Optional/</loc>
+         <lastmod>2022-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://localhost/docs/elements/element-deeplabcut/0.2/tutorials/09-AlternateDataset/</loc>
+         <lastmod>2022-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
